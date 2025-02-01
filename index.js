@@ -95,7 +95,7 @@ app.delete("/api/delete-player/:playerID", async (req, res) => {
 
     res.status(200).json(players);
   } catch (error) {
-    res.status(404).json({ error: "UNABLE TO UPDATE THE PLAYER" });
+    res.status(404).json({ error: "UNABLE TO DELETE THE PLAYER" });
   }
 });
 
