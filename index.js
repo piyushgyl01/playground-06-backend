@@ -58,17 +58,6 @@ app.get("/api/get-player", async (req, res) => {
   }
 });
 
-//READ API
-app.get("/api/get-player", async (req, res) => {
-  try {
-    const players = await Player.find();
-
-    res.status(200).json(players);
-  } catch (error) {
-    res.status(404).json({ error: "UNABLE TO GET THE PLAYER" });
-  }
-});
-
 //UPDATE API
 app.put("/api/put-player/:playerID", async (req, res) => {
   try {
